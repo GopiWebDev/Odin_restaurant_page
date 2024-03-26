@@ -1,29 +1,75 @@
+import clear from "./index";
+
 const createMenu = () => {
+  clear();
   const content = document.querySelector("#content");
-  const pageContent = document.createElement("div");
-  pageContent.classList.add("page-content");
 
-  const heading = document.createElement("h1");
-  heading.textContent = "Our Menu";
+  const menu = document.createElement("div");
+  menu.classList.add("menu");
 
-  const menuList = document.createElement("ul");
-  const menuItem1 = document.createElement("li");
-  menuItem1.textContent = "Pomodoro";
+  menu.appendChild(
+    createMenuItem(
+      "Farmhouse",
+      " Apizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes"
+    )
+  );
 
-  const menuItem2 = document.createElement("li");
-  menuItem2.textContent = "Alfred";
+  menu.appendChild(
+    createMenuItem(
+      "Peppy",
+      "Chunky paneer with crisp capsicum and spicy red pepper - quite a mouthful!"
+    )
+  );
 
-  const menuItem3 = document.createElement("li");
-  menuItem3.textContent = "Burger";
+  menu.appendChild(
+    createMenuItem(
+      "Mexican",
+      "A pizza loaded with crunchy onions, crisp capsicum, juicy tomatoes and jalapeno with a liberal sprinkling of exotic Mexican herbs."
+    )
+  );
 
-  menuList.appendChild(menuItem1);
-  menuList.appendChild(menuItem2);
-  menuList.appendChild(menuItem3);
+  menu.appendChild(
+    createMenuItem(
+      "Deluxe",
+      "For a vegetarian looking for a BIG treat that goes easy on the spices, this one's got it all.. The onions, the capsicum, those delectable mushrooms - with paneer and golden corn to top it all."
+    )
+  );
 
-  pageContent.appendChild(heading);
-  pageContent.appendChild(menuList);
+  menu.appendChild(
+    createMenuItem(
+      "Extravaganz",
+      "A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around."
+    )
+  );
 
-  content.appendChild(pageContent);
+  menu.appendChild(
+    createMenuItem(
+      "Veggie",
+      "Goldern Corn, Black Olives, Capsicum & Red Paprika"
+    )
+  );
+
+  content.appendChild(menu);
+};
+
+const createMenuItem = (name, description) => {
+  const menuItem = document.createElement("div");
+  menuItem.classList.add("item");
+
+  const foodName = document.createElement("h3");
+  foodName.textContent = name;
+
+  const foodDescription = document.createElement("p");
+  foodDescription.textContent = description;
+
+  const foodImg = document.createElement("img");
+  foodImg.src = `/src/images/${name}.jpg`;
+
+  menuItem.appendChild(foodImg);
+  menuItem.appendChild(foodName);
+  menuItem.appendChild(foodDescription);
+
+  return menuItem;
 };
 
 export default createMenu;
