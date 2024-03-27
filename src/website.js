@@ -1,3 +1,5 @@
+import clear from ".";
+import createAbout from "./about";
 import createHome from "./home";
 import createMenu from "./menu";
 
@@ -16,8 +18,20 @@ const createHeader = () => {
   menu.textContent = "Menu";
   about.textContent = "About";
 
-  home.addEventListener("click", createHome);
-  menu.addEventListener("click", createMenu);
+  home.addEventListener("click", () => {
+    clear();
+    createHome();
+  });
+
+  menu.addEventListener("click", () => {
+    clear();
+    createMenu();
+  });
+
+  about.addEventListener("click", () => {
+    clear();
+    createAbout();
+  });
 
   header.appendChild(home);
   header.appendChild(menu);

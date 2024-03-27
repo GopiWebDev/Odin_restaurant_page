@@ -116,3 +116,32 @@ nav:hover {
 .item p {
   padding: 5px;
 }
+
+.about {
+  height: 80%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin-top: 60px;
+}
+
+.about h2 {
+  font-size: 4em;
+  color: wheat;
+  letter-spacing: 3px;
+  margin: 20px;
+}
+
+.about p {
+  font-size: 1.5em;
+  color: whitesmoke;
+  margin: 20px;
+}
+
+.about p:last-of-type {
+  font-size: 2em;
+}
+
+.active {
+  border-bottom: 2px solid white;
+}

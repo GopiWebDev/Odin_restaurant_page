@@ -1,7 +1,4 @@
-import clear from "./index";
-
 const createMenu = () => {
-  clear();
   const content = document.querySelector("#content");
 
   const menu = document.createElement("div");
