@@ -60,6 +60,7 @@ nav:hover {
   justify-content: space-evenly;
   margin: 50px 0;
   padding: 35px;
+  animation: fadeIn 1.5s;
 }
 
 .home h2 {
@@ -89,6 +90,7 @@ nav:hover {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(auto, auto);
   gap: 20px;
+  animation: fadeIn 1.5s;
 }
 
 .item:hover {
@@ -123,6 +125,7 @@ nav:hover {
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
   margin-top: 60px;
+  animation: fadeIn 1.5s;
 }
 
 .about h2 {
@@ -144,4 +147,14 @@ nav:hover {
 
 .active {
   border-bottom: 2px solid white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
