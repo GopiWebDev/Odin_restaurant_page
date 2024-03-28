@@ -16,7 +16,7 @@ const createHome = () => {
   para.textContent = "Life is all about discovering new tastes.";
 
   const img = document.createElement("img");
-  img.src = "/src/images/Peppy.jpg";
+  img.src = "images/Peppy.jpg";
 
   const para2 = document.createElement("p");
   para2.textContent = "Order online or visit us!";
