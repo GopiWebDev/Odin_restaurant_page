@@ -1,3 +1,5 @@
+import Peppy from "./images/Peppy.jpg";
+
 const createHome = () => {
   const content = document.querySelector("#content");
 
@@ -16,7 +18,7 @@ const createHome = () => {
   para.textContent = "Life is all about discovering new tastes.";
 
   const img = document.createElement("img");
-  img.src = "images/Peppy.jpg";
+  img.src = Peppy;
 
   const para2 = document.createElement("p");
   para2.textContent = "Order online or visit us!";
